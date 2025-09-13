@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "f2031bf6-244d-4cef-97ea-882a52ee83ad",
+		"name": "stocky-backend",
+		"description": "Backend APIs for Stocky Assignment.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48407902",
+		"_collection_link": "https://tausifansari2907-5134596.postman.co/workspace/d7c00626-0ccb-4ac5-88e5-5b77ddec939f/collection/48407902-f2031bf6-244d-4cef-97ea-882a52ee83ad?action=share&source=collection_link&creator=48407902"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/reward",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "test-key-1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"50cc1fed-464f-46f7-bb53-e8b1178eb96d\",\r\n  \"symbol\": \"RELIANCE\",\r\n  \"quantity\": 2.5,\r\n  \"price_per_share\": 2650.1234,\r\n  \"fees\": {\r\n    \"brokerage\": 10,\r\n    \"stt\": 5,\r\n    \"gst\": 2.5\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/reward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reward"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/today-stocks/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "test-key-1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"50cc1fed-464f-46f7-bb53-e8b1178eb96d\",\r\n  \"symbol\": \"RELIANCE\",\r\n  \"quantity\": 2.5,\r\n  \"price_per_share\": 2650.1234,\r\n  \"fees\": {\r\n    \"brokerage\": 10,\r\n    \"stt\": 5,\r\n    \"gst\": 2.5\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/today-stocks/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"today-stocks",
+						"50cc1fed-464f-46f7-bb53-e8b1178eb96d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/stats/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "test-key-1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"50cc1fed-464f-46f7-bb53-e8b1178eb96d\",\r\n  \"symbol\": \"RELIANCE\",\r\n  \"quantity\": 2.5,\r\n  \"price_per_share\": 2650.1234,\r\n  \"fees\": {\r\n    \"brokerage\": 10,\r\n    \"stt\": 5,\r\n    \"gst\": 2.5\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/stats/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"stats",
+						"50cc1fed-464f-46f7-bb53-e8b1178eb96d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/historical-inr/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "test-key-1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"50cc1fed-464f-46f7-bb53-e8b1178eb96d\",\r\n  \"symbol\": \"RELIANCE\",\r\n  \"quantity\": 2.5,\r\n  \"price_per_share\": 2650.1234,\r\n  \"fees\": {\r\n    \"brokerage\": 10,\r\n    \"stt\": 5,\r\n    \"gst\": 2.5\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/historical-inr/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"historical-inr",
+						"50cc1fed-464f-46f7-bb53-e8b1178eb96d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/portfolio/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "test-key-1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"50cc1fed-464f-46f7-bb53-e8b1178eb96d\",\r\n  \"symbol\": \"RELIANCE\",\r\n  \"quantity\": 2.5,\r\n  \"price_per_share\": 2650.1234,\r\n  \"fees\": {\r\n    \"brokerage\": 10,\r\n    \"stt\": 5,\r\n    \"gst\": 2.5\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/portfolio/50cc1fed-464f-46f7-bb53-e8b1178eb96d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"portfolio",
+						"50cc1fed-464f-46f7-bb53-e8b1178eb96d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
